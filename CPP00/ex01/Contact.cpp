@@ -6,44 +6,33 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:24:19 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/03/19 16:38:07 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:59:40 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void set_values(std::string f_name, std::string l_name, std::string n_name, std::string ph_num, std::string secret)
-{
-	Contact	c;
-
-	c.setFirstName(f_name);
-	c.setLastName(l_name);
-	c.setNickName(n_name);
-	c.setPhoneNumber(ph_num);
-	c.setSecret(secret);
-}
-
-std::string Contact::getFirstName()
+std::string Contact::getFirstName() const
 {
 	return (firstName);
 }
 
-std::string Contact::getLastName()
+std::string Contact::getLastName() const
 {
 	return (lastName);
 }
 
-std::string Contact::getNickName()
+std::string Contact::getNickName() const
 {
 	return (nickName);
 }
 
-std::string Contact::getPhoneNumber()
+std::string Contact::getPhoneNumber() const
 {
 	return (phoneNumber);
 }
 
-std::string Contact::getSecret()
+std::string Contact::getSecret() const
 {
 	return (darkestSecret);
 }

@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:24:26 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/03/19 16:42:06 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/04/30 19:00:19 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 # include "Contact.hpp"
+# include <sstream>
 
 # ifndef MAX_CONTACTS
 #  define MAX_CONTACTS 8
@@ -21,21 +22,19 @@
 
 class PhoneBook {
 	private: //access specifier
-		Contact	arr[8]; // members
-		int		currentIndex;
+		Contact	arr[MAX_CONTACTS]; // members
 		int		count;
-
-		void printContacts(int index) const;
+		int		oldestIndex;
 
 	public:
+		void printTable() const;
 		PhoneBook();
-		~PhoneBook();
-		PhoneBook(const PhoneBook& other); // Copy constructor, creates new object
-		PhoneBook& operator=(const PhoneBook& other); // operator, copies into already existing object
+		// PhoneBook(const PhoneBook& other); // Copy constructor, creates new object
+		// PhoneBook& operator=(const PhoneBook& other); // operator, copies into already existing object
 
 		void addContact();
 		void searchContact();
 };
 
 #endif
-// the scope operator (::, two colons)
+// оператор scope resolution (::, two colons)

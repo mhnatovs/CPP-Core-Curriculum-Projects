@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:24:31 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/03/19 16:39:05 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:59:56 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,31 +30,25 @@ void printMenu(void);
 
 int main()
 {
-	PhoneBook	book[8];
+	PhoneBook	book;
 	std::string	input;
-	int			i = 0;
-	
+
 	printMenu();
 	while (1)
 	{
-		std::cin >> input;
+		std::getline(std::cin, input);
 		if (input == "ADD" || input == "add")
-		{
-			book[i].addContact();
-		}
+			book.addContact();
 		else if (input == "SEARCH" || input == "search")
 		{
-			std::cout << "welcome SEARCH\n";
-			
+			book.searchContact();
 		}
 		else if (input == "EXIT" || input == "exit")
-		{
 			return (0);
-		}
 		else
 		{
 			std::cout << "Invalid command\n" << std::endl;
-			std::cout << BYELLOW << "  > " << RESET;
+			std::cout << BYELLOW << "add/search/exit " << RESET;
 		}
 	}
 	return (0);
@@ -68,18 +62,13 @@ void printMenu(void)
 	std::cout << BYELLOW << "* " << BWHITE << "P H O N E B O O K" << BYELLOW << " *";
 	std::cout << BMAGENTA << "  |" << std::endl;
 	std::cout << "  -------------------------" << RESET << std::endl;
-	std::cout << std::endl;
 	std::cout << DIM << WHITE << "  # choose your action #" << RESET << std::endl;
-	std::cout << std::endl;
 	std::cout << BGREEN << BOLD << "  ADD" << RESET;
 	std::cout << DIM << WHITE << "      - add new contact" << RESET << std::endl;
-	std::cout << std::endl;
 	std::cout << BCYAN << BOLD << "  SEARCH" << RESET;
 	std::cout << DIM << WHITE << "   - find a contact" << RESET << std::endl;
-	std::cout << std::endl;
 	std::cout << BRED << BOLD << "  EXIT" << RESET;
 	std::cout << DIM << WHITE << "     - quit program" << RESET << std::endl;
-	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << BYELLOW << "  > " << RESET;
 }

@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:24:13 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/03/19 16:38:56 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/04/30 18:59:48 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 
 class Contact {
 	private:
@@ -25,18 +26,16 @@ class Contact {
 		std::string	darkestSecret;
 		
 	public:
-		std::string getFirstName();
-		std::string getLastName();
-		std::string getNickName();
-		std::string getPhoneNumber();
-		std::string getSecret();
+		std::string getFirstName() const;
+		std::string getLastName() const;
+		std::string getNickName() const;
+		std::string getPhoneNumber() const;
+		std::string getSecret() const;
 		void setFirstName(const std::string &str);
 		void setLastName(const std::string &str);
 		void setNickName(const std::string &str);
 		void setPhoneNumber(const std::string &str);
 		void setSecret(const std::string &str);
 };
-
-void set_values(std::string f_name, std::string l_name, std::string n_name, std::string ph_num, std::string secret);
 
 #endif
