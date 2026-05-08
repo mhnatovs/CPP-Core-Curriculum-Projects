@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 17:36:21 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/05 17:42:33 by mhnatovs         ###   ########.fr       */
+/*   Created: 2026/05/05 17:43:03 by mhnatovs          #+#    #+#             */
+/*   Updated: 2026/05/07 17:42:32 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void Zombie::setName(const std::string &str)
+Zombie* newZombie( std::string name )
 {
-	name = str;
-}
+    Zombie *newOne = new Zombie();
 
-std::string Zombie::getName() const
-{
-	return name;
-}
-
-void Zombie::announce( void )
-{
-	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
+    newOne->setName(name);
+    return newOne;
 }
