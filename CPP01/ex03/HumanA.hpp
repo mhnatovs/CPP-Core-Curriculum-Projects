@@ -1,5 +1,17 @@
-#ifndef HUMAN_A
-# define HUMAN_A
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/17 20:03:39 by mhnatovs          #+#    #+#             */
+/*   Updated: 2026/05/17 20:15:53 by mhnatovs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef HUMAN_A_HPP
+# define HUMAN_A_HPP
 
 # include "Weapon.hpp"
 # include <string>
