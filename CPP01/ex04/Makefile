@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/05/19 15:12:17 by mhnatovs          #+#    #+#              #
+#    Updated: 2026/05/19 15:25:22 by mhnatovs         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = sed_is_for_losers
 
 SRC  = main.cpp \
@@ -13,7 +25,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)
