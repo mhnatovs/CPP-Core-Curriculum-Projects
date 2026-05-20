@@ -1,9 +1,11 @@
-NAME = zombie
+NAME = harlFilter
 
-SRC  = main.cpp
+SRC  = main.cpp \
+	   Harl.cpp
 
 OBJ_DIR = obj
-OBJ  = $(OBJ_DIR)/main.o
+OBJ  = $(OBJ_DIR)/main.o \
+	   $(OBJ_DIR)/Harl.o
 
 CXX  = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
