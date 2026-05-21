@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 14:24:31 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/04/30 18:59:56 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/05 11:52:13 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,35 +26,32 @@
 #include <iostream>
 #include <string>
 
-void printMenu(void);
+void displayMenu(void);
 
 int main()
 {
 	PhoneBook	book;
 	std::string	input;
 
-	printMenu();
+	displayMenu();
 	while (1)
 	{
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return 1;
 		if (input == "ADD" || input == "add")
 			book.addContact();
 		else if (input == "SEARCH" || input == "search")
-		{
 			book.searchContact();
-		}
 		else if (input == "EXIT" || input == "exit")
 			return (0);
 		else
-		{
-			std::cout << "Invalid command\n" << std::endl;
-			std::cout << BYELLOW << "add/search/exit " << RESET;
-		}
+			std::cout << "Invalid command" << std::endl;
+		std::cout << BYELLOW << "add/search/exit " << RESET;
 	}
 	return (0);
 }
 
-void printMenu(void)
+void displayMenu(void)
 {
 	std::cout << BMAGENTA << BOLD;
 	std::cout << "  -------------------------" << std::endl;
