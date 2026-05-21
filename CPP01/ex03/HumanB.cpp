@@ -6,13 +6,15 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 20:03:42 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/17 20:03:43 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/21 14:20:33 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 #include <iostream>
 
+//member initializer list
+//optional weapon
 HumanB::HumanB(std::string name)
     : name(name), weapon(nullptr) {}
 

@@ -6,11 +6,11 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/17 20:03:55 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/05/19 15:25:31 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/05/21 13:26:55 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = violence
 
 SRC  = main.cpp \
 	   HumanA.cpp \
