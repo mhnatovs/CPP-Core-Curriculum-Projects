@@ -5,19 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/05/22 14:26:18 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/05/22 14:26:19 by mhnatovs         ###   ########.fr        #
+#    Created: 2026/05/23 16:14:29 by mhnatovs          #+#    #+#              #
+#    Updated: 2026/05/23 19:01:21 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = bsp
 
 SRC =   main.cpp \
-		Fixed.cpp
+		Fixed.cpp \
+		Point.cpp \
+		bsp.cpp
 
 OBJ_DIR = obj
 OBJ =   $(OBJ_DIR)/main.o \
-		$(OBJ_DIR)/Fixed.o
+		$(OBJ_DIR)/Fixed.o \
+		$(OBJ_DIR)/Point.cpp \
+		$(OBJ_DIR)/bsp.cpp
 
 CXX = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
