@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 15:35:51 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/23 18:43:19 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/24 14:49:14 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Fixed::Fixed()
 {
-    std::cout << "Default constructor called\n";
+    // std::cout << "Default constructor called\n";
     _fixedPointValue = 0;
 }
 
 Fixed::Fixed(const Fixed& other)
 {
-    std::cout << "Copy constructor called\n";
+    // std::cout << "Copy constructor called\n";
     *this = other;
 }
 Fixed& Fixed::operator=(const Fixed& other)
 {
-    std::cout << "Copy assignment operator called\n";
+    // std::cout << "Copy assignment operator called\n";
 
     if (this != &other)
         _fixedPointValue = other.getRawBits();
@@ -35,18 +35,18 @@ Fixed& Fixed::operator=(const Fixed& other)
 
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called\n";
+    // std::cout << "Destructor called\n";
 }
 
 Fixed::Fixed(const int value)
 {
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     _fixedPointValue = value << _fractionalBits;
 }
 
 Fixed::Fixed(const float value)
 {
-    std::cout << "Float constructor called" << std::endl;
+    // std::cout << "Float constructor called" << std::endl;
     _fixedPointValue = roundf(value * (1 << _fractionalBits));
 }
 

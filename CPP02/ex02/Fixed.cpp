@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 15:35:51 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/23 18:43:19 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/24 13:11:31 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,24 +106,28 @@ bool Fixed::operator!=(const Fixed& other) const
     return (_fixedPointValue != other._fixedPointValue);
 }
 
-Fixed Fixed::operator+(const Fixed& other) const
-{
-    return (Fixed(this->toFloat() + other.toFloat()));
+Fixed Fixed::operator+(const Fixed& other) const {
+    Fixed result;
+    result.setRawBits(_fixedPointValue + other._fixedPointValue);
+    return result;
 }
 
-Fixed Fixed::operator-(const Fixed& other) const
-{
-    return (Fixed(toFloat() - other.toFloat()));
+Fixed Fixed::operator-(const Fixed& other) const {
+    Fixed result;
+    result.setRawBits(_fixedPointValue - other._fixedPointValue);
+    return result;
 }
 
-Fixed Fixed::operator/(const Fixed& other) const
-{
-    return (Fixed(toFloat() / other.toFloat()));
+Fixed Fixed::operator*(const Fixed& other) const {
+    Fixed result;
+    result.setRawBits((_fixedPointValue * other._fixedPointValue) >> _fractionalBits);
+    return result;
 }
 
-Fixed Fixed::operator*(const Fixed& other) const
-{
-    return (Fixed(toFloat() * other.toFloat()));
+Fixed Fixed::operator/(const Fixed& other) const {
+    Fixed result;
+    result.setRawBits((_fixedPointValue << _fractionalBits) / other._fixedPointValue);
+    return result;
 }
 
 Fixed& Fixed::operator++()

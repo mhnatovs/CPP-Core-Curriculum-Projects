@@ -6,7 +6,7 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/23 16:14:29 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/05/23 19:01:21 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/05/24 14:44:34 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ SRC =   main.cpp \
 OBJ_DIR = obj
 OBJ =   $(OBJ_DIR)/main.o \
 		$(OBJ_DIR)/Fixed.o \
-		$(OBJ_DIR)/Point.cpp \
-		$(OBJ_DIR)/bsp.cpp
+		$(OBJ_DIR)/Point.o \
+		$(OBJ_DIR)/bsp.o
 
 CXX = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98

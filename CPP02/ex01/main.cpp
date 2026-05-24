@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 15:35:43 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/23 15:35:44 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/24 12:54:24 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main( void )
     std::cout << "a is " << a.toInt() << " as integer" << std::endl;
     std::cout << "b is " << b.toInt() << " as integer" << std::endl;
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+    std::cout << "d is " << d.toInt() << " as integer/\n" << std::endl;
+
     return 0;
 }
