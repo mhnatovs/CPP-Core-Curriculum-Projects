@@ -6,18 +6,20 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/25 11:48:41 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/05/26 15:23:24 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/05/26 15:23:16 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = scavtrap
 
 SRC = main.cpp \
-	  ClapTrap.cpp
+	  ClapTrap.cpp \
+	  ScavTrap.cpp
 
 OBJDIR = obj
 OBJ = $(OBJDIR)/main.o \
-	  $(OBJDIR)/ClapTrap.o
+	  $(OBJDIR)/ClapTrap.o \
+	  $(OBJDIR)/ScavTrap.o
 
 CXX = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
