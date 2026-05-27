@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 12:02:26 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/26 15:44:57 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/27 13:35:19 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class ClapTrap {
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& other);
         ClapTrap& operator=(const ClapTrap& other);
-        virtual ~ClapTrap();
+        ~ClapTrap();
 
         int         getHitPoints(void) const;
         int         getEnergyPoints(void) const;
