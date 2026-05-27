@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 13:13:11 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/26 17:49:07 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/26 18:38:37 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoint
     std::cout << "ClapTrap " << _name << " constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &other)
-    : _name(other._name),
-      _hitPoints(other._hitPoints),
-      _energyPoints(other._energyPoints),
-      _attackDamage(other._attackDamage)
+ClapTrap::ClapTrap(const ClapTrap &other) :
+				_name(other._name),
+				_hitPoints(other._hitPoints),
+				_energyPoints(other._energyPoints),
+				_attackDamage(other._attackDamage)
 {
     std::cout << "ClapTrap copy constructor called" << std::endl;
 }
@@ -34,10 +34,10 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &other) {
     std::cout << "ClapTrap copy assignment operator called" << std::endl;
     if (this != &other)
     {
-        _name = other.getName();;
-        _hitPoints = other.getHitPoints();
-        _energyPoints = other.getEnergyPoints();
-        _attackDamage = other.getAttackDamage();
+        _name = other._name;
+        _hitPoints = other._hitPoints;
+        _energyPoints = other._energyPoints;
+        _attackDamage = other._attackDamage;
     }
     return (*this);
 }
@@ -81,7 +81,7 @@ void ClapTrap::setName(std::string name)
 
 
 void ClapTrap::attack(const std::string& target) {
-    if (_hitPoints == 0 || _energyPoints <= 0)
+    if (_hitPoints <= 0 || _energyPoints <= 0)
     {
         std::cout << "ClapTrap " << _name << " can't attack, no hit points or energy!" << std::endl;
         return ;
