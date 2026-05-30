@@ -1,34 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/27 17:21:18 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/30 13:55:29 by mhnatovs         ###   ########.fr       */
+/*   Created: 2026/05/30 15:40:47 by mhnatovs          #+#    #+#             */
+/*   Updated: 2026/05/30 15:41:24 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGAnimal_HPP
-# define WRONGAnimal_HPP
+#include "MateriaSource.hpp"
 
-# include <iostream>
-# include <string>
-
-class WrongAnimal
-{
-    protected:
-        std::string type;
-
-    public:
-        WrongAnimal();
-        WrongAnimal(const WrongAnimal &other);
-        WrongAnimal &operator=(const WrongAnimal &other);
-        ~WrongAnimal();
-
-        void makeSound(void) const;
-        std::string getType(void) const;
-};
-
-#endif

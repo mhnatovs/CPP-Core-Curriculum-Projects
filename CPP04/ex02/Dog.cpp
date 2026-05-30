@@ -6,20 +6,20 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 17:40:53 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/30 14:11:47 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/30 14:12:53 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 
-Dog::Dog() : Animal(), brain(new Brain()) {
+Dog::Dog() : AAnimal(), brain(new Brain()) {
     std::cout << "Dog default constructor\n";
     type = "Dog";
 }
 
 Dog::Dog(const Dog &other)
-        : Animal(other),
+        : AAnimal(other),
           brain(new Brain(*other.brain))
 {
     std::cout << "Dog copy constructor called\n";
@@ -29,7 +29,7 @@ Dog& Dog::operator=(const Dog &other) {
     std::cout << "Dog assignment operator called\n";
     if (this != &other)
     {
-        Animal::operator=(other);
+        AAnimal::operator=(other);
         *brain = *other.brain;//deep copy
     }
     return (*this);

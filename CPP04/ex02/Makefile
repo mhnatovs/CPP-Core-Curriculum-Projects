@@ -6,14 +6,14 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/27 16:59:50 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/05/30 12:07:26 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/05/30 11:27:25 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= animal
+NAME	= aanimal
 
 SRC		= main.cpp \
-		  Animal.cpp \
+		  AAnimal.cpp \
 		  Dog.cpp \
 		  Cat.cpp \
 		  WrongAnimal.cpp \
@@ -22,7 +22,7 @@ SRC		= main.cpp \
 
 OBJDIR	= obj
 OBJ		= $(OBJDIR)/main.o \
-		  $(OBJDIR)/Animal.o \
+		  $(OBJDIR)/AAnimal.o \
 		  $(OBJDIR)/Dog.o \
 		  $(OBJDIR)/Cat.o \
 		  $(OBJDIR)/WrongAnimal.o \

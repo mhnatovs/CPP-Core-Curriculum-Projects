@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 17:21:18 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/28 15:10:11 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/30 11:23:33 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Dog : public Animal
         virtual ~Dog();
 
         virtual void makeSound(void) const;
+        Brain* getBrain(void) const;
 };
 
 #endif

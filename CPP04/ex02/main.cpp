@@ -6,28 +6,31 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 17:31:30 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/30 14:15:20 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/30 14:32:19 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
-    const int SIZE = 100;
-    const Animal* arr[SIZE];
-    for (int i = 0; i < SIZE / 2; i++)
-    {
-        std::cout << i << " ";
-        arr[i] = new Dog();
-    }
-    for (int i = SIZE / 2; i < SIZE; i++)
-    {
-        std::cout << i << " ";
-        arr[i] = new Cat();
-    }
+	// AAnimal test;
+    // const int SIZE = 100;
+    // const AAnimal* arr[SIZE];
+    // for (int i = 0; i < SIZE / 2; i++)
+    // {
+    //     std::cout << i << " ";
+    //     arr[i] = new Dog();
+    // }
+    // for (int i = SIZE / 2; i < SIZE; i++)
+    // {
+    //     std::cout << i << " ";
+    //     arr[i] = new Cat();
+    // }
 
     std::cout << "---------------------------\n";
     Cat cat1;
@@ -52,21 +55,11 @@ int main()
     std::cout << "dog2's idea is: " << dog2.getBrain()->getIdea(0) << std::endl;
 
     std::cout << "---------------------------\n";
-    for (int i = 0; i < SIZE; i++)
-    {
-        std::cout << i << " ";
-        delete arr[i];
-    }
+    // for (int i = 0; i < SIZE; i++)
+    // {
+    //     std::cout << i << " ";
+    //     delete arr[i];
+    // }
     std::cout << "---------------------------\n";
     return (0);
 }
-
-// int main()
-// {
-// const Animal* j = new Dog();
-// const Animal* i = new Cat();
-// delete j;//should not create a leak
-// delete i;
-// // ...
-// return 0;
-// }

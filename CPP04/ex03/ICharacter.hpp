@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/27 17:21:18 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/30 13:55:29 by mhnatovs         ###   ########.fr       */
+/*   Created: 2026/05/30 15:25:57 by mhnatovs          #+#    #+#             */
+/*   Updated: 2026/05/30 16:32:29 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGAnimal_HPP
-# define WRONGAnimal_HPP
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
-# include <iostream>
-# include <string>
+# include "AMateria.hpp"
 
-class WrongAnimal
-{
-    protected:
-        std::string type;
-
+class ICharacter {
     public:
-        WrongAnimal();
-        WrongAnimal(const WrongAnimal &other);
-        WrongAnimal &operator=(const WrongAnimal &other);
-        ~WrongAnimal();
+        virtual ~ICharacter() {};
+        virtual std::string const & getName() const = 0;
+        virtual void equip(AMateria* m) = 0;
+        virtual void unequip(int idx) = 0;
+        virtual void use(int idx, ICharacter& target) = 0;
 
-        void makeSound(void) const;
-        std::string getType(void) const;
 };
 
 #endif

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/27 17:21:18 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/30 13:55:29 by mhnatovs         ###   ########.fr       */
+/*   Created: 2026/05/30 15:40:52 by mhnatovs          #+#    #+#             */
+/*   Updated: 2026/05/30 15:54:48 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGAnimal_HPP
-# define WRONGAnimal_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-# include <iostream>
-# include <string>
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
+# include "IMateriaSource.hpp"
 
-class WrongAnimal
+class MateriaSource : public IMateriaSource
 {
-    protected:
-        std::string type;
-
     public:
-        WrongAnimal();
-        WrongAnimal(const WrongAnimal &other);
-        WrongAnimal &operator=(const WrongAnimal &other);
-        ~WrongAnimal();
-
-        void makeSound(void) const;
-        std::string getType(void) const;
+        MateriaSource();
+        MateriaSource(const MateriaSource& other);
+        MateriaSource& operator=(const MateriaSource& other);
+        ~MateriaSource();
 };
 
 #endif

@@ -6,29 +6,26 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/27 16:59:50 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/05/30 12:07:26 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/05/30 15:37:14 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= animal
+NAME	= interface
 
 SRC		= main.cpp \
-		  Animal.cpp \
-		  Dog.cpp \
-		  Cat.cpp \
-		  WrongAnimal.cpp \
-		  WrongCat.cpp \
-		  Brain.cpp
+		  AMateria.cpp \
+		  ICharacter.cpp \
+		  IMateriaSource.cpp \
+		  Cure.cpp \
+		  Ice.cpp
 
 OBJDIR	= obj
 OBJ		= $(OBJDIR)/main.o \
-		  $(OBJDIR)/Animal.o \
-		  $(OBJDIR)/Dog.o \
-		  $(OBJDIR)/Cat.o \
-		  $(OBJDIR)/WrongAnimal.o \
-		  $(OBJDIR)/WrongCat.o \
-		  $(OBJDIR)/Brain.o
-
+		  $(OBJDIR)/AMateria.o \
+		  $(OBJDIR)/ICharacter.o \
+		  $(OBJDIR)/IMateriaSource.o \
+		  $(OBJDIR)/Cure.o
+		  $(OBJDIR)/Ice.o
 
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98

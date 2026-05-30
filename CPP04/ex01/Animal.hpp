@@ -6,12 +6,12 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 17:21:18 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/28 12:14:02 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/05/30 11:23:33 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef Animal_HPP
+# define Animal_HPP
 
 # include <iostream>
 # include <string>
