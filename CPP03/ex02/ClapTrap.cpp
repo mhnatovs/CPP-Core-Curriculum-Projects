@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 13:13:11 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/05/31 14:48:48 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/03 18:00:56 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int ClapTrap::getEnergyPoints(void) const {
 }
 
 int ClapTrap::getAttackDamage(void) const {
-    return (_attackDamage);`
+    return (_attackDamage);
 }
 
 std::string ClapTrap::getName(void) const {
