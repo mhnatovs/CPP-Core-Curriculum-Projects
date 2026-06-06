@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 14:12:32 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/06/05 16:12:46 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/06 18:53:12 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ int main()
     try
     {
         std::cout << YELLOW << "\n * No catch *\n" << RESET;
-        Form a("Form_A", true, 1, 2);
-        Form b("Form_B", false, 3, 4);
-        Form c("Form_C", true, 150, 150);
-        Form d("Form_D", false, 1, 1);
+        
+        Form a("Form_A", 1, 2);
+        Form b("Form_B", 3, 4);
+        Form c("Form_C", 150, 150);
+        Form d("Form_D", 1, 1);
         
         std::cout << a << std::endl;
         std::cout << b << std::endl;
@@ -39,8 +40,8 @@ int main()
     std::cout << YELLOW << " * Assignment operator *" << RESET << std::endl;
     try
     {
-        Form a("Form_A", true, 1, 2);
-        Form b("Form_B", false, 3, 4);
+        Form a("Form_A", 1, 2);
+        Form b("Form_B", 3, 4);
 
         std::cout << b << std::endl;
         b = a;
@@ -55,7 +56,7 @@ int main()
     std::cout << YELLOW << "\n * Copy constructor *" << RESET << std::endl;
     try
     {
-        Form a("Form_A", true, 1, 2);
+        Form a("Form_A", 1, 2);
 
         Form b(a);
         std::cout << a << std::endl;
@@ -69,7 +70,7 @@ int main()
     try
     {
         std::cout << YELLOW << "\n * *** *\n" << RESET;
-        Form a("Form_A", true, 1, 2);
+        Form a("Form_A", 100, 2);
         Bureaucrat b("Nick", 10);
         a.beSigned(b);
         std::cout << a << std::endl;
@@ -94,7 +95,7 @@ int main()
     try
     {
         std::cout << YELLOW << "\n * Initialization *\n" << RESET;
-        Form a("Form_A", 1, 151, 1);
+        Form a("Form_A", 151, 1);
         std::cout << a << std::endl;
     }
     catch(const std::exception& e)
@@ -105,7 +106,7 @@ int main()
     try
     {
         std::cout << YELLOW << "\n * Initialization *\n" << RESET;
-        Form a("Form_A", 1, 151, 0);
+        Form a("Form_A", 151, 0);
         std::cout << a << std::endl;
     }
     catch(const std::exception& e)
@@ -116,7 +117,7 @@ int main()
     try
     {
         std::cout << YELLOW << "\n * Initialization *\n" << RESET;
-        Form a("Form_A", 1, 8, 0);
+        Form a("Form_A", 8, 0);
         std::cout << a << std::endl;
     }
     catch(const std::exception& e)
@@ -127,7 +128,7 @@ int main()
     try
     {
         std::cout << YELLOW << "\n * Initialization *\n" << RESET;
-        Form a("Form_A", 0, 2000, 1);
+        Form a("Form_A", 2000, 1);
         std::cout << a << std::endl;
     }
     catch(const std::exception& e)
@@ -135,5 +136,25 @@ int main()
         std::cerr << e.what() << '\n';
     }
     std::cout << std::endl;
+    // ------------------------------------------------------------------
+
+    try {
+    std::cout << YELLOW << "\n * signForm *\n" << RESET;
+    Form f("Form_123", 50, 50);
+    Bureaucrat b("Nick", 30);
+    b.signForm(f);
+    std::cout << f << std::endl;
+    } catch (std::exception& e) {
+    std::cerr << e.what() << std::endl;
+    }
+
+    try {
+    std::cout << YELLOW << "\n * signForm fail *\n" << RESET;
+    Form f("Form_123", 10, 10);
+    Bureaucrat b("Nick", 100);
+    b.signForm(f);  // "couldn't sign because..."
+    } catch (std::exception& e) {
+        std::cerr << e.what() << std::endl;
+}   
     return (0);
 }

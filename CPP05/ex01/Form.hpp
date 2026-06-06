@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:27:43 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/06/05 15:57:40 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/06 18:48:27 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Form {
         const int           _gradeToExec;
 
     public:
-        Form(const std::string& name, bool isSigned, const int toSign, const int toExec);
+        Form(const std::string& name, const int toSign, const int toExec);
         Form(const Form& other);
         Form& operator=(const Form& other);
         ~Form();

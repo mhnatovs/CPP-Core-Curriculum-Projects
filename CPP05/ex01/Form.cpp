@@ -6,16 +6,16 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 13:27:49 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/06/05 15:57:49 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/06 18:51:38 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form(const std::string& name, bool isSigned, const int toSign, const int toExec)
+Form::Form(const std::string& name, const int toSign, const int toExec)
       : _name(name),
-        _isSigned(isSigned),
+        _isSigned(false),
         _gradeToSign(toSign),
         _gradeToExec(toExec)
 {
@@ -58,12 +58,10 @@ void Form::beSigned(Bureaucrat& b)
 
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
-    os << f.getName() <<", signed: "
-       << (f.getSigned() ? "yes" : "no")
-       << ", grade to sign: "
-       << f.getGradeToSign()
-       << ", grade to execute: "
-       << f.getGradeToExec()
+    os << f.getName()
+       << ", signed: "        << (f.getSigned() ? "yes" : "no")
+       << ", grade to sign: " << f.getGradeToSign()
+       << ", grade to exec: " << f.getGradeToExec()
        << ".";
     return (os);
 }
