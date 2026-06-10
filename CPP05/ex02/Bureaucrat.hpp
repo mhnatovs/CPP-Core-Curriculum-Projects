@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/31 14:12:39 by mhnatovs          #+#    #+#             */
+/*   Updated: 2026/06/09 18:58:52 by mhnatovs         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
+
+# include <iostream>
+# include <string>
+# include <stdexcept>
+
+//forward declaration to avoid circular dependency
+class AForm;
+
+class Bureaucrat {
+    private:
+        const std::string   _name;
+        int                 _grade;
+
+    public:
+        Bureaucrat(const std::string& name, int grade);
+        Bureaucrat(const Bureaucrat& other);
+        Bureaucrat& operator=(const Bureaucrat& other);
+        ~Bureaucrat();
+
+        const std::string&  getName() const;
+        int                 getGrade() const;
+        void incrementGrade();
+        void decrementGrade();
+        void signForm(AForm& form);
+
+    class GradeTooHighException : public std::exception {
+            public:
+                const char* what() const throw();//guarantees that there will be no `throw` inside
+        };
+
+    class GradeTooLowException : public std::exception {
+            public:
+                const char* what() const throw();
+        };
+
+};
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
+
+#endif
