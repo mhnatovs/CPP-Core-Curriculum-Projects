@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 13:49:41 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/06/10 13:30:24 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/10 15:06:47 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "AForm.hpp"
 # include <string>
+# include <cstdlib>
 
 class RobotomyRequestForm : public AForm {
     private:
@@ -26,7 +27,7 @@ class RobotomyRequestForm : public AForm {
         RobotomyRequestForm& operator=(RobotomyRequestForm const&other);
         ~RobotomyRequestForm();
 
-        RobotomyRequestForm getTarget() const;
+        std::string getTarget() const;
 
         void execute(Bureaucrat const & executor) const;
 

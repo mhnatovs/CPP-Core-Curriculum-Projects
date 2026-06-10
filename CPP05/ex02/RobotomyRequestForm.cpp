@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 17:21:56 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/06/10 13:31:01 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/10 15:06:32 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,17 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const&ot
 
 RobotomyRequestForm::~RobotomyRequestForm() {}
 
-RobotomyRequestForm RobotomyRequestForm::getTarget() const
+std::string RobotomyRequestForm::getTarget() const
 {
     return _target;
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-    std::cout << RobotomyRequestForm::getTarget() << " has been robotomized successfully 50%% of the time" << std::endl;
+    checkExecution(executor);
+    std::cout << "**** DRILLING NOISES ***" << std::endl;
+    if (std::rand() % 2 == 0)
+        std::cout << _target << " has been robotomized successfully!" << std::endl;
+    else
+        std::cout << _target << " robotomy failed!" << std::endl;
 }

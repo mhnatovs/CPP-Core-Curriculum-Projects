@@ -6,7 +6,7 @@
 /*   By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 17:19:35 by mhnatovs          #+#    #+#             */
-/*   Updated: 2026/06/10 14:13:56 by mhnatovs         ###   ########.fr       */
+/*   Updated: 2026/06/10 15:01:01 by mhnatovs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class PresidentialPardonForm : public AForm {
         PresidentialPardonForm& operator=(PresidentialPardonForm const&other);
         ~PresidentialPardonForm();
 
-        PresidentialPardonForm getTarget() const;
+        std::string getTarget() const;
         void execute(Bureaucrat const & executor) const;
 };
 
