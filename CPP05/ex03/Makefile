@@ -6,7 +6,7 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/27 16:59:50 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/06/11 13:57:58 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/06/14 17:00:06 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ SRC		= main.cpp \
 		  AForm.cpp \
 		  ShrubberyCreationForm.cpp \
 		  PresidentialPardonForm.cpp \
-		  RobotomyRequestForm.cpp
-		  
+		  RobotomyRequestForm.cpp \
+		  Intern.cpp
 
 OBJDIR	= obj
 OBJ		= $(OBJDIR)/main.o \
@@ -26,7 +26,8 @@ OBJ		= $(OBJDIR)/main.o \
 		  $(OBJDIR)/AForm.o \
 		  $(OBJDIR)/ShrubberyCreationForm.o \
 		  $(OBJDIR)/PresidentialPardonForm.o \
-		  $(OBJDIR)/RobotomyRequestForm.o
+		  $(OBJDIR)/RobotomyRequestForm.o \
+		  $(OBJDIR)/Intern.o
 
 CXX		= c++
 FLAGS	= -Wall -Wextra -Werror -std=c++98
