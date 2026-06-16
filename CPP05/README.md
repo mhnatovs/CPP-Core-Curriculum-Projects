@@ -47,8 +47,9 @@ After compilation, run the executable:
 ```
 
 ## Resources
-https://www.w3schools.com/cpp/cpp_exceptions.asp
-https://www.geeksforgeeks.org/cpp/function-pointer-in-cpp/
+ - https://www.w3schools.com/cpp/cpp_exceptions.asp
+
+ - https://www.geeksforgeeks.org/cpp/function-pointer-in-cpp/
 
 ## AI Usage
 
