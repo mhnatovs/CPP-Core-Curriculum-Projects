@@ -6,7 +6,7 @@
 #    By: mhnatovs <mhnatovs@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/17 13:08:58 by mhnatovs          #+#    #+#              #
-#    Updated: 2026/06/19 19:57:44 by mhnatovs         ###   ########.fr        #
+#    Updated: 2026/06/29 13:21:32 by mhnatovs         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ OBJ		= $(OBJDIR)/main.o \
 		  $(OBJDIR)/ScalarConverter.o
 
 CXX		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
+FLAGS	=  -std=c++98
+
+# -Wall -Wextra -Werror
 
 all: $(NAME)
 
